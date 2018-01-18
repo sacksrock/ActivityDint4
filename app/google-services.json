@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "693005270724",
+    "firebase_url": "https://actividad4interfaces.firebaseio.com",
+    "project_id": "actividad4interfaces",
+    "storage_bucket": "actividad4interfaces.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693005270724:android:b1f3211a78ea98a7",
+        "android_client_info": {
+          "package_name": "com.utad.danieliglesia.actividad4interfaces"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "693005270724-8buspqvt7inb361q7s9ou963ph6tio8j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.utad.danieliglesia.actividad4interfaces",
+            "certificate_hash": "eb0e74f199580579864210f00a9415b5e8d29cc0"
+          }
+        },
+        {
+          "client_id": "693005270724-tr6un7vrblitgifok6hmrlutm1895oop.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmQdUstHt5hYKpivHZNumrjbZXSv0ZFo4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "693005270724-tr6un7vrblitgifok6hmrlutm1895oop.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

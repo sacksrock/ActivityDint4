@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -20,6 +21,10 @@ import com.bumptech.glide.Glide;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private ImageView imageView;
+    FragmentRojo fragmentRojo;
+    FragmentAmarillo fragmentAmarillo;
+    FragmentVerde fragmentVerde;
+    SettingsFragment settingsFragment;
 //terminado
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,14 +35,10 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        fragmentRojo = (FragmentRojo) getSupportFragmentManager().findFragmentById(R.id.fragmentRojo);
+        fragmentAmarillo = (FragmentAmarillo) getSupportFragmentManager().findFragmentById(R.id.fragmentAmarillo);
+        fragmentVerde = (FragmentVerde) getSupportFragmentManager().findFragmentById(R.id.fragmentVerde);
+        settingsFragment = (SettingsFragment) getSupportFragmentManager().findFragmentById(R.id.settingsFragment);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -58,6 +59,16 @@ public class MainActivity extends AppCompatActivity
         } else {
             super.onBackPressed();
         }
+    }
+    public void botonClicked(View v){
+        //FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
+        FragmentTransaction transition = this.getSupportFragmentManager().beginTransaction();
+        transition.hide(fragmentRojo);
+        transition.hide(fragmentAmarillo);
+        transition.hide(fragmentVerde);
+        transition.show(settingsFragment);
+        transition.commit();
     }
 
     @Override
